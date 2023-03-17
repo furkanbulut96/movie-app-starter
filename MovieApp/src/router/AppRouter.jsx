@@ -1,0 +1,30 @@
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Navbar from "../components/Navbar";
+import Login from "../pages/Login";
+import Main from "../pages/Main";
+import MovieDetail from "../pages/MovieDetail";
+import Register from "../pages/Register";
+import PrivateRouter from "./PrivateRouter";
+
+const AppRouter = () => {
+  return (
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/details/:id" element={<PrivateRouter />}>
+          <Route path="" element={<MovieDetail />} />
+        </Route>
+      </Routes>
+    </>
+  );
+};
+
+export default AppRouter;
+
+//* Details/:id detailden sonra gelen id ne olursa olsun bize MovieDetail Sayfasını getircek
+//*id yakalıyınca olucak useparams() ile
+//*Routelar dinamik çalışması için Navbarda tanımlama yapılcak
