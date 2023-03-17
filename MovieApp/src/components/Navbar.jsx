@@ -34,7 +34,7 @@ const Navbar = () => {
                 aria-expanded="false"
               >
                 <img
-                  // src={currentUser.photoURL || avatar}
+                  src={currentUser?.photoURL || avatar}
                   className="rounded-full"
                   style={{ height: 25, width: 25 }}
                   alt=""
@@ -94,3 +94,5 @@ export default Navbar;
 
 //*UseContext çağrılma tüketim ksımıdır hangisi contexti 
 //*istiyorsaj,k parantez içine o yazılır
+
+//*37. Optional chainingMethodu

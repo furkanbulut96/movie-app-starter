@@ -59,6 +59,7 @@ const AuthContextProvider = ({ children }) => {
   const LogOut = () => {
     signOut(auth);
     toastWarnNotify("ÇIKIŞ YAPILDI");
+    navigate("/login")
   };
 
   const userObserver = () => {
